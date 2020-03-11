@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>About Us Flip Box</name>
+	<author>William Gollinger</author>
+	<version>0.0.19</version>
+	<description>A dynamic description box which flips over when clicked.</description>
+	<files>
+		<filename>mod_flip_bio.xml</filename>
+		<filename module="mod_flip_bio">mod_flip_bio.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>media/stylesheet.css</filename>
+		<filename>media/script.js</filename>
+		<filename>media/defaultfront.png</filename>
+		<filename>media/defaultback.png</filename>
+		<!--<folder>sql</folder>-->
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="professional">
+				<field 
+					name="prof_img"
+					type="media"
+					directory="FlipBio" 
+					label="Professional Photo" />
+				<field
+					name="name"
+					type="text"
+					default="--name--"
+					label="Name" />
+				<field
+					name="title"
+					type="text"
+					default="--title--"
+					label="Title" />
+				<field 
+					name="occupation" 
+					type="radio" 
+					default="0" 
+					label="Select an option" 
+					description="Detrmines the label for the Join Industry entry.">
+				  	<option value="0">Pedorthist</option>
+				  	<option value="1">Office Admin</option>
+				</field>				
+				<field
+					name="joined_ind"
+					type="text"
+					default="--joined the industry--"
+					label="Joined Industry in:" />
+				<field
+					name="joined"
+					type="text"
+					default="--joint Foot By Foot--"
+					label="Joined Foot By Foot in:" />
+				<field
+					name="experience"
+					type="text"
+					default="--professional experience--"
+					label="Professional Experience" />
+				<field
+					name="prof_vol"
+					type="text"
+					default="--professional volunteering--"
+					label="Professional Volunteering" />
+				<field
+					name="pub"
+					type="text"
+					default="--publications--"
+					label="Publications" />
+				<field
+					name="comm_vol"
+					type="text"
+					default="--community volunteering--"
+					label="Community Volunteering" />
+				<field
+					name="specialty"
+					type="text"
+					default="--specialty--"
+					label="Specialty" />
+				<field
+					name="coffee"
+					type="text"
+					default="--coffee--"
+					label="Coffee?" />
+			</fieldset>
+
+			<fieldset name="personal">
+				<field
+					name="personal_fields"
+					type="subform"
+					label="Personal Fields"
+					description="Subforms for personal information"
+					multiple="true"
+					min="1"
+					max="10"
+					filter="JComponentHelper::filterText"					
+					>
+					<form>
+						<field
+							name="field_label"
+							type="text"
+							label="Label"
+							/>
+						<field
+							name="field_answer"
+							type="text"
+							label="Answer"
+							/>
+					</form>
+				</field>
+				<field 
+					name="pers_img"
+					type="media"
+					directory="FlipBio" 
+					label="Personal Photo"/>
+				<field
+					name="skill"
+					type="text"
+					default="--useless skill--"
+					label="Useless Skill" />
+				<field
+					name="theme"
+					type="text"
+					default="--wrestler theme song--"
+					label="Wrestler Theme Song" />
+				<field
+					name="fad"
+					type="text"
+					default="--favourite fad--"
+					label="Favourite Fad" />
+				<field
+					name="food"
+					type="text"
+					default="--weirdest food ever eaten--"
+					label="Weirdest Food Ever Eaten" />
+				<field
+					name="risk"
+					type="text"
+					default="--riskiest thing ever done--"
+					label="Riskiest Thing Ever Done" />
+				<field
+					name="fav_char"
+					type="text"
+					default="--favourite sitcom character--"
+					label="Favourite Sitcom Character" />
+				<field
+					name="doppel"
+					type="text"
+					default="--doppelganger--"
+					label="Doppelganger" />
+				<field
+					name="trip"
+					type="text"
+					default="--favourite trip--"
+					label="Favourite Trip" />
+				<field
+					name="genre"
+					type="text"
+					default="--favourite music genre--"
+					label="Favourite Music Genre" />
+				<field
+					name="concert"
+					type="text"
+					default="--favourite concert--"
+					label="Favourite Concert" />
+
+			</fieldset>
+		</fields>
+	</config>
+	</extension>
+
